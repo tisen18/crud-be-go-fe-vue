@@ -1,0 +1,106 @@
+{
+  "info": {
+    "_postman_id": "12345-67890-abcdef",
+    "name": "Pasien API CRUD",
+    "description": "Collection for testing CRUD operations on Pasien API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Pasien",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "Content-Type header"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"Nama\": \"Budi Santoso\", \"Alamat\": \"Jl. Merdeka No. 10\", \"NoHP\": \"08123456789\", \"Penyakit\": \"Demam Berdarah\"}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/api/pasien",
+          "host": [
+            "http://localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "api",
+            "pasien"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Pasien",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:9090/api/pasien",
+          "host": [
+            "http://localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "api",
+            "pasien"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Pasien",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "Content-Type header"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"Nama\": \"Budi Santoso\", \"Alamat\": \"Jl. Merdeka No. 10\", \"NoHP\": \"08123456789\", \"Penyakit\": \"Demam Berdarah\"}"
+        },
+        "url": {
+          "raw": "http://localhost:9090/api/pasien/{{id}}",
+          "host": [
+            "http://localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "api",
+            "pasien",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Pasien",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:9090/api/pasien/{{id}}",
+          "host": [
+            "http://localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "api",
+            "pasien",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
